@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+  }
+
+
+  h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4{
+    font-size: 20px;
+    color: #222;
+}
+
+h6{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+section-p1{
+    padding:40px 60px
+}
+
+section-m1{
+    margin: 40px 0;
+}
+
+body{
+    width: 100%;
+}
+body {
+    width: 100%;
+}
+
+
+/*header section.....................*/
+#header .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+#header .logo img {
+  height: 50px; /* Adjust size as needed */
+  margin-right: 10px; /* Space between image and text */
+}
+
+#header .logo i {
+  font-size: 24px; /* Adjust icon size */
+  margin-right: 10px; /* Space between icon and text */
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #fff;
+    border-bottom: 1px solid #000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+
+
+.header.logo {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+.header.logo i {
+    color: #008CBA;
+    margin-right: 5px;
+  }
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+  }
+  
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+  }
+  
+#navbar li a:hover,
+#navbar li a.active {
+    color: blue;
+  }
+
+  
+/* Banner styling....................................*/
+.home {
+    border: 1px solid;
+    display: flex;
+    background: url(backgrrr.png) no-repeat;
+    background-size: 100% 400px; 
+    background-position: 0% 0%; 
+    padding-top: 8rem;
+    padding-bottom: 7.8rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    text-align: center;
+    /* margin-top: -50px; */
+  }
+  
+  h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #3e8e41;
+  }
+  /* Banner styling....................................*/
+
+
+/* Features styling....................................*/
+.features {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.features .heading {
+    top: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+.features .heading span {
+    color: green;
+}
+
+.features .box-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.features .box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 350px;
+    width: 300px;
+    transition: transform 0.3s ease;
+    position: relative;
+    text-align: center;  /* Align text to the left */
+}
+
+.features .box:hover {
+    cursor: pointer;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.features .box img {
+    width: 250px;  /* Adjust image size as needed */
+    height: 300px;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -50px; /* adjust the margin as needed */
+}
+
+.features .box h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    position: relative;
+    right: -1%;
+    margin-top: 200px;
+}
+
+
+
+.features .box .btn {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;  /* Center the button */
+    right: -4%;
+    margin-top: 50px;
+}
+.features .box .btn:hover {
+    background-color: #003f7f;
+}
+
+/* Features styling....................................*/
+
+
+
+
+/* Footer styling....................................*/
+#section-p1,footer {
+  margin: 0;
+  padding: 2rem 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+footer .col {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer.h3{
+  margin-bottom: 30px;
+}
+
+footer h5{
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+footer p{
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+
+footer a{
+  font-size: 13px;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+footer .follow{
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+footer .install.row img{
+  border: 1px solid #088178;
+  border-radius: 6px;
+}
+
+footer .install img{
+  margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover, 
+footer a:hover{
+  color: #088178;
+}
+
+footer .copyright{
+  width: 100%;
+  text-align: center;
+
+}
+/* Footer styling....................................*/
+
+
+/*Shop Page..........................................*/
+
+.small-container{
+  max-width: 1080px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.col4{
+  flex-basis: 25%;
+  padding: 10px;
+  min-width: 200px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+.col4 img{
+  width: 100%;
+}
+
+.title{
+  text-align: center;
+  margin: 0 auto 80px;
+  position: relative;
+  line-height: 60px;
+  color: #555;
+}
+
+h4{
+  color: #555;
+  font-weight: normal;
+}
+.col-4 p{
+  font-size: 14px;
+}
+.rating.fa{
+  color: gold;
+}
+.col-4::hover{
+  transform: translate(-5px);
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+.review-box {
+  background-color: blue;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  right: 80px;
+}
+
+.read-reviews {
+  text-decoration: none;
+  color: white;
+}
+
+.read-reviews:hover {
+  color: #23527c;
+}
+
+
+
+/*Shop Page..........................................*/
+#product1{
+  text-align: center;
+}
+
+#product1 .pro-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+#product1 .pro{
+  width: 25%;
+  min-width: 250px;
+  padding: 10px 20px;
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+#product1 .pro:hover{
+  box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+}
+
+#product1 .pro img{
+  width: 60%;
+  border-radius: 20px;
+}
+
+#product1 .pro .des{
+  text-align: start;
+  padding: 10px 0;
+}
+
+#product1 .pro .des h5{
+  padding-top: 7px;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+#product1 .pro .des i{
+  font-size: 12px;
+  color: rgb(243, 181, 25);
+}
+
+#product1.pro.cart {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  font-weight: 500;
+  color: #088178;
+  border: 1px solid #cce7d0;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+/*Shop Page..........................................*/
+
+/*single product details........................*/
+#prodetails{
+  width: 100%;
+  margin: 0;
+  display: flex;
+  margin-top: 20px;
+}
+#prodetails .single-pro-image{
+  padding-top: 20px;
+  padding-left: 10px;
+  width: 50%;
+  margin-right: 20px;
+
+}
+
+#prodetails .single-pro-details {
+  width: 50%;
+  padding-top: 30px;
+}
+
+#prodetails .single-pro-details h4 {
+  padding: 40px 0 20px 0;
+}
+
+#prodetails .single-pro-details h2 {
+  font-size: 26px;
+  color: #286d34;
+}
+
+
+#prodetails .single-pro-details .inputs {
+  width: 50px;
+  height: 47px;
+  justify-content: space-between;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#prodetails .single-pro-details button{
+  width: 100%;
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  background-color: goldenrod;
+  padding: 7px 25px;
+  cursor: pointer;
+  color: white;
+}
+#prodetails .single-pro-details button:hover{
+  background-color: #333;
+}
+
+#prodetails .single-pro-details span{
+  width: 100%;
+  margin: 0;
+  line-height: 25px;
+  justify-content: center;
+  padding: 20px;
+}
+/*single product details........................*/
+
+

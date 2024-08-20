@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+	<title>Form Reviews</title>
+</head>
+<body>
+<!--Header section-->
+<section id="header">
+    <a href="#" class="logo"> <i class="fa fa-shopping-basket"></i>Marianas Store</a>
+    <div>
+       <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href= "shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+        </ul>
+    </div>
+</section>
+<!--Header section-->
+
+<!--Banner section-->
+<section class="home" id="home">
+    <div class="content">
+       <h3>
+          Fresh Sea Food Everyday
+      </h3>
+      <p>Welcome To Customer Reviews Setion!!! </p>
+
+    </div>
+
+</section>
+<!--Banner section-->
+
+
+<!--Reviews section-->
+<section id="crev">
+<div class="wrapper">
+		<h3>Describe Your Experience</h3>
+		<form action="#">
+			<div class="rating">
+				<input type="number" name="rating" hidden>
+				<i class='bx bx-star star' style="--i: 0;"></i>
+				<i class='bx bx-star star' style="--i: 1;"></i>
+				<i class='bx bx-star star' style="--i: 2;"></i>
+				<i class='bx bx-star star' style="--i: 3;"></i>
+				<i class='bx bx-star star' style="--i: 4;"></i>
+			</div>
+			<input type="text" name="name" placeholder="Your Name" class="input-field">
+            <input type="email" name="email" placeholder="Your Email" class="input-field">
+			<textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+			<div class="btn-group">
+				<button type="submit" class="btn submit">Submit</button>
+				<button class="btn cancel">Cancel</button>
+			</div>
+		</form>
+	</div>
+</section>
+  
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+#crev{
+    margin: 0;
+    background: var(--light);
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+:root {
+	--yellow: #FFBD13;
+	--blue: #4383FF;
+	--blue-d-1: #3278FF;
+	--light: #F5F5F5;
+	--grey: #AAA;
+	--white: #FFF;
+	--shadow: 8px 8px 30px rgba(0,0,0,.05);
+}
+.wrapper {
+	background: var(--white);
+	padding: 2rem;
+	max-width: 576px;
+	width: 100%;
+	border-radius: .75rem;
+	box-shadow: var(--shadow);
+	text-align: center;
+}
+.wrapper h3 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+.rating {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-gap: .5rem;
+	font-size: 2rem;
+	color: var(--yellow);
+	margin-bottom: 2rem;
+}
+.rating .star {
+	cursor: pointer;
+}
+.rating .star.active {
+	opacity: 0;
+	animation: animate .5s calc(var(--i) * .1s) ease-in-out forwards;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+
+.rating .star:hover {
+	transform: scale(1.1);
+}
+
+.input-field {
+    width: 100%;
+    background: var(--light);
+    padding: 1rem;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    margin-bottom: .5rem;
+    font-size: 1rem;
+}
+
+textarea {
+	width: 100%;
+	background: var(--light);
+	padding: 1rem;
+	border-radius: .5rem;
+	border: none;
+	outline: none;
+	font-size: 1rem;
+	resize: none;
+	margin-bottom: .5rem;
+}
+.btn-group {
+	display: flex;
+	grid-gap: .5rem;
+	align-items: center;
+}
+.btn-group .btn {
+	padding: .75rem 1rem;
+	border-radius: .5rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: .875rem;
+	font-weight: 500;
+}
+.btn-group .btn.submit {
+	background: var(--blue);
+	color: var(--white);
+}
+.btn-group .btn.submit:hover {
+	background: var(--blue-d-1);
+}
+.btn-group .btn.cancel {
+	background: var(--white);
+	color: var(--blue);
+}
+.btn-group .btn.cancel:hover {
+	background: var(--light);
+}
+</style>
+
+<script>
+const allStar = document.querySelectorAll('.rating .star')
+const ratingValue = document.querySelector('.rating input')
+
+allStar.forEach((item, idx)=> {
+	item.addEventListener('click', function () {
+		let click = 0
+		ratingValue.value = idx + 1
+
+		allStar.forEach(i=> {
+			i.classList.replace('bxs-star', 'bx-star')
+			i.classList.remove('active')
+		})
+		for(let i=0; i<allStar.length; i++) {
+			if(i <= idx) {
+				allStar[i].classList.replace('bx-star', 'bxs-star')
+				allStar[i].classList.add('active')
+			} else {
+				allStar[i].style.setProperty('--i', click)
+				click++
+			}
+		}
+	})
+})
+</script>
+<!--Reviews section-->
+
+<!-- Footer section -->
+<footer class="section-p1">
+    <div class="col">
+        <h3> Mariana Stores</h3>
+        <h5>Contact</h5>
+        <p><strong>Address: </strong>(252) 521-7623
+            20 Roszel Rd
+            Princeton, New Jersey(NJ), 08540 </p>
+        <p><strong>Phone:</strong> +01 2222 322 /(+91) 01 2195 6879</p>
+        <p><strong>Hours:</strong> 09:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+
+               <h4>Follow us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+            </div>
+    </div>
+
+
+    <div class="col">
+        <h5>About</h5>
+        <a href="#">About us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+      </div>
+
+    <div class="col">
+        <h5>My Account</h5>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+    </div>
+
+    <div class="col install">
+        <h5>Install App</h5>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+          <img src="app.png" alt="">
+          <img src="gplay.png" alt="">
+        </div>
+        <p>Secured Payment Gateways </p>
+        <img src="pay.png" alt="">
+    </div>
+
+
+    <div class="copyright">
+        <p>© 2021, Tech2 etc - HTML CSS Ecommerce Template</p>
+    </div>
+</footer>
+<!-- Footer section -->
+
+
+
+
+</body>
+</html>

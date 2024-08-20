@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marianas Mart</title>
+
+    <!--Below code for icons extraction-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <!--code for linking css-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--Header section-->
+<section id="header">
+        <a href="#" class="logo"> <i class="fa fa-shopping-basket"></i>Marianas Store</a>
+        <div>
+           <ul id="navbar">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="faq.html">FAQs</a></li>
+              <li><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+            </ul>
+        </div>
+</section>
+<!--Header section-->
+
+
+<!--Single Product section-->
+<section id="prodetails" class="section-p1">
+    <div class="single-pro-image">
+      <img src="Blackpomfret.png" width="100%" id="MainImg" alt="">
+    </div>
+
+    <div class="Single-pro-details">
+        <h2>Black Pomfret</h2>
+        <p>Available(In Stock)</p>
+        <h4>$14.45 per KG</h4>
+        <div class="btn11">
+            <button class="btn btn-decrement">-</button>
+            <input type="text" id="quantity" class="btn-input" value="0" step="0.25">
+            <button class="btn btn-increment">+</button>
+            <div class="Total-amount">
+               <h4>total-amount</h4>
+             <p class="total-price">
+            
+                <span id="price">
+                      0
+                </span>
+             </p>
+            </div>
+        </div>
+        <button id="addToCartBtn">Add To Cart</button>
+        <h4>Product Details</h4>
+        <span>The black pomfret (Parastromateus niger) is a species of carangid native to reefs of the Indian Ocean and western Pacific Ocean. This species is very important to local fisheries and is the only known member of its genus.</span>
+    </div>
+
+
+    
+<script>
+    // NOW AM ADD FUNCTIONS TO BUTTONS INCREMENT AND DECREMENT TOTAL PRICE
+
+// LET'S START
+let valueCount = 0;
+let increment = document.querySelector(".btn-increment");
+let decrement = document.querySelector(".btn-decrement");
+let count = document.querySelector("#quantity");
+let totalcount = document.querySelector("#price");
+
+// NOW AM CREATING AN ARROW FUNCTION
+increment.addEventListener("click", () => {
+    valueCount = parseFloat((valueCount + 0.25).toFixed(2));
+    count.value = valueCount;
+    totalcount.innerHTML = (valueCount * 14.45).toFixed(2); 
+});
+
+decrement.addEventListener("click", () => {
+    // THIS IS DECREMENT FUNCTION IN THIS AN GIVING A CONDITION TO DISABLE THE (-) VALUES
+    if (valueCount > 0) {
+        valueCount = parseFloat((valueCount - 0.25).toFixed(2));
+        count.value = valueCount;
+        totalcount.innerHTML = (valueCount * 14.45).toFixed(2); 
+    }
+    // DECREMENT FUNCTION IS
+});
+
+</script>
+</section>
+
+<!--Client reviews section-->
+
+<!--Client reviews section-->
+
+
+
+
+
+
+
+<!-- Footer section -->
+
+<footer class="section-p1">
+    <div class="col">
+        <h3> Mariana Stores</h3>
+        <h5>Contact</h5>
+        <p><strong>Address: </strong>(252) 521-7623
+            20 Roszel Rd
+            Princeton, New Jersey(NJ), 08540 </p>
+        <p><strong>Phone:</strong> +01 2222 322 /(+91) 01 2195 6879</p>
+        <p><strong>Hours:</strong> 09:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+
+               <h4>Follow us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+            </div>
+    </div>
+
+
+    <div class="col">
+        <h5>About</h5>
+        <a href="#">About us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+      </div>
+
+    <div class="col">
+        <h5>My Account</h5>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+    </div>
+
+    <div class="col install">
+        <h5>Install App</h5>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+          <img src="app.png" alt="">
+          <img src="gplay.png" alt="">
+        </div>
+        <p>Secured Payment Gateways </p>
+        <img src="pay.png" alt="">
+    </div>
+
+
+    <div class="copyright">
+        <p>© 2021, Tech2 etc - HTML CSS Ecommerce Template</p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Footer section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
